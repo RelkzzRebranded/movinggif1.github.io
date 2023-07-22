@@ -8,12 +8,13 @@
       height: 200px; /* Adjust the height as needed */
       transition: transform 0.6s;
     }
-    .container:hover .image {
+    .container:hover .svg-image {
       transform: rotate(180deg);
     }
-    .image {
+    .svg-image {
       width: 100%;
       height: 100%;
+      fill: #000;
       transition: transform 0.6s;
       transform: rotatex(90deg);
       transform-style: preserve-3d;
@@ -22,9 +23,8 @@
 </head>
 <body>
   <div class="container">
-    <div class="image">
-      <img src="https://raw.githubusercontent.com/RelkzzRebranded/movinggif1.github.io/714191223a26c962a32395aa7bfb6245cd20bab8/VelocityPanelDesign.svg" alt="PanelDesign">
-    </div>
+    <!-- Replace "your-svg-file.svg" with the URL of your SVG file -->
+    <object class="svg-image" data="https://raw.githubusercontent.com/RelkzzRebranded/movinggif1.github.io/a00011a6cba727364c95d3e60e424729125ea4d0/VelocityPanelDesign.svg" type="image/svg+xml"></object>
   </div>
 </body>
 </html>
