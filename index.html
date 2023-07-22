@@ -1,51 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <style>
-    .container {
-      perspective: 1200px;
-      width: 384px; /* Set the width to match the SVG image width */
-      height: 483px; /* Set the height to match the SVG image height */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden; /* To prevent the SVG from overflowing the container */
-    }
-    .container:hover .svg-image {
-      animation: stopAndFace 0.6s forwards; /* SVG will float around indefinitely on hover */
-      transform: translate3d(0, 0, 0); /* Reset the transform on hover */
-    }
-    .svg-image {
-      width: 100%;
-      height: 100%;
-      fill: #000; /* Adjust the fill color of the SVG if needed */
-      animation: shake 1.5 infinite;
-      transform-style: preserve-3d;
+    /* CSS to style the container element */
+    .image-container {
+      animation: shake 2s infinite;
+      transform-origin: center;
     }
 
-    /* Animation for floating the SVG around */
+    /* Keyframes for the smooth shake animation */
     @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
-    @keyframes stopAndFace {
-      0% { transform: rotateY(0); }
+      0%, 100% {
+        transform: translateX(0);
+      }
+      10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+      }
+      20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Replace "your-svg-file.svg" with the URL of your SVG file -->
-    <img class="svg-image" src="https://raw.githubusercontent.com/RelkzzRebranded/movinggif1.github.io/9e7d9a14779181ef13100634b1378deed839ae58/VelocityPanelDesign.svg?example=foo&sanitize=true" alt="PanelDesign">
+  <div class="image-container">
+    <img src="https://raw.githubusercontent.com/RelkzzRebranded/movinggif1.github.io/9f8617b52e9fda0f2735e6404b6c08e65eccdecf/VelocityPanelDesign.svg?sanitize=true" alt="Panel Design Image">
   </div>
 </body>
 </html>
