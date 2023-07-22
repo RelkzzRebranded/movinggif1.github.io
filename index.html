@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* CSS to style the container element */
-    .image-container {
-      animation: shake 2s infinite;
-      transform-origin: center;
-    }
-
-    /* Keyframes for the smooth shake animation */
-    @keyframes shake {
-      0%, 100% {
+    @keyframes smoothShake {
+      0% {
         transform: translateX(0);
       }
-      10%, 30%, 50%, 70%, 90% {
+      25% {
         transform: translateX(-5px);
       }
-      20%, 40%, 60%, 80% {
+      50% {
         transform: translateX(5px);
       }
+      75% {
+        transform: translateX(-3px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .shake-image {
+      display: inline-block;
+      animation: smoothShake 2s ease-in-out infinite;
     }
   </style>
 </head>
 <body>
-  <div class="image-container">
-    <img src="https://raw.githubusercontent.com/RelkzzRebranded/movinggif1.github.io/9f8617b52e9fda0f2735e6404b6c08e65eccdecf/VelocityPanelDesign.svg?sanitize=true" alt="Panel Design Image">
+  <div class="shake-image">
+    <img src="https://raw.githubusercontent.com/RelkzzRebranded/movinggif1.github.io/main/VelocityPanelDesign.png" alt="Panel Design Image">
   </div>
 </body>
 </html>
